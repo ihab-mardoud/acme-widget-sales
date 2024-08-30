@@ -40,6 +40,18 @@ echo $basket->total(); // Outputs the total cost
 
 Run `./vendor/bin/phpunit` to execute the test suite.
 
+## Static Analysis with PHPStan
+
+This project uses PHPStan for static code analysis. To run PHPStan:
+
+```bash
+./vendor/bin/phpstan analyse src tests
+```
+
+PHPStan is configured to run at level 8 (the highest level). You can adjust the level in the `phpstan.neon` file if needed.
+
+To run PHPStan as part of your development workflow, you can add it to your pre-commit hook or run it before pushing changes.
+
 ## Docker
 
 To run the application in a Docker container:
@@ -54,10 +66,11 @@ To run the application in a Docker container:
    docker-compose exec app bash
    ```
 
-3. Once inside the container, you can run tests or use the PHP interactive shell:
+3. Once inside the container, you can run tests, use the PHP interactive shell, or run PHPStan:
    ```
    vendor/bin/phpunit
    php -a
+   vendor/bin/phpstan analyse src tests
    ```
 
 4. To stop the container:
@@ -83,3 +96,11 @@ The system uses the Strategy pattern for flexible application of delivery charge
 - `BasketFactory`: Creates a preconfigured `Basket` with the current catalogue, delivery rules, and offers.
 
 This architecture allows for easy addition of new products, delivery charge rules, and special offers without modifying existing code.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open-sourced software licensed under the MIT license.
