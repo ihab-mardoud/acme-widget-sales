@@ -2,6 +2,14 @@
 
 This project implements a proof of concept for Acme Widget Co's new sales system. It calculates the total cost of a basket of items, taking into account delivery charges and special offers.
 
+## GitHub Repository
+
+This project is hosted on GitHub. You can find the repository at:
+
+https://github.com/ihab-mardoud/acme-widget-sales
+
+Feel free to star the repository if you find it useful!
+
 ## Requirements
 
 - PHP 8.1 or higher
@@ -10,7 +18,11 @@ This project implements a proof of concept for Acme Widget Co's new sales system
 
 ## Installation
 
-1. Clone this repository
+1. Clone this repository:
+   ```
+   git clone https://github.com/ihab-mardoud/acme-widget-sales.git
+   cd acme-widget-sales
+   ```
 2. Run `composer install` to install dependencies
 
 ## Usage
